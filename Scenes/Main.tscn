@@ -786,4 +786,4 @@ layer_3/z_index = -1
 layer_3/tile_data = PackedInt32Array(262160, 131077, 0, 262161, 196613, 0, 262162, 196613, 0, 262163, 196613, 0, 262164, 262149, 0, 524295, 5, 0, 589831, 5, 1, 655367, 5, 1, 720903, 5, 2)
 
 [node name="Player" parent="." instance=ExtResource("7_6nqks")]
-position = Vector2(135, 82)
+position = Vector2(140, 72)
