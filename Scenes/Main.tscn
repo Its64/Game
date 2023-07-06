@@ -1,11 +1,11 @@
 [gd_scene load_steps=16 format=3 uid="uid://bykdchnnqhyng"]
 
-[ext_resource type="Texture2D" uid="uid://dm0vy8liljrpt" path="res://Basic pack/Sprout Lands - Sprites - Basic pack/Tilesets/Water.png" id="1_jskf8"]
-[ext_resource type="Texture2D" uid="uid://bgme8l2dqv7qx" path="res://Basic pack/Sprout Lands - Sprites - Basic pack/Tilesets/Wooden House.png" id="2_048bu"]
-[ext_resource type="Texture2D" uid="uid://lalkoh76fas1" path="res://Basic pack/Sprout Lands - Sprites - Basic pack/Tilesets/Fences.png" id="3_yty6p"]
-[ext_resource type="Texture2D" uid="uid://c0nsewj4kroos" path="res://Basic pack/Sprout Lands - Sprites - Basic pack/Tilesets/ground tiles/new tiles/Grass hill tiles v.2.png" id="4_8m0x6"]
-[ext_resource type="Texture2D" uid="uid://c1hlttgdj58i" path="res://Basic pack/Sprout Lands - Sprites - Basic pack/Objects/Basic Grass Biom things 1.png" id="5_1anrc"]
-[ext_resource type="Texture2D" uid="uid://pyurna2n1l72" path="res://Basic pack/Sprout Lands - Sprites - Basic pack/Objects/Wood Bridge.png" id="6_luwpo"]
+[ext_resource type="Texture2D" uid="uid://dm0vy8liljrpt" path="res://Basic pack t/Sprout Lands - Sprites - Basic pack/Tilesets/Water.png" id="1_jskf8"]
+[ext_resource type="Texture2D" uid="uid://bgme8l2dqv7qx" path="res://Basic pack t/Sprout Lands - Sprites - Basic pack/Tilesets/Wooden House.png" id="2_048bu"]
+[ext_resource type="Texture2D" uid="uid://lalkoh76fas1" path="res://Basic pack t/Sprout Lands - Sprites - Basic pack/Tilesets/Fences.png" id="3_yty6p"]
+[ext_resource type="Texture2D" uid="uid://c0nsewj4kroos" path="res://Basic pack t/Sprout Lands - Sprites - Basic pack/Tilesets/ground tiles/new tiles/Grass hill tiles v.2.png" id="4_8m0x6"]
+[ext_resource type="Texture2D" uid="uid://c1hlttgdj58i" path="res://Basic pack t/Sprout Lands - Sprites - Basic pack/Objects/Basic Grass Biom things 1.png" id="5_1anrc"]
+[ext_resource type="Texture2D" uid="uid://pyurna2n1l72" path="res://Basic pack t/Sprout Lands - Sprites - Basic pack/Objects/Wood Bridge.png" id="6_luwpo"]
 [ext_resource type="PackedScene" uid="uid://cv4lf4mwn684d" path="res://Scenes/Player.tscn" id="7_6nqks"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_48rcv"]

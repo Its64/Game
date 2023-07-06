@@ -11,7 +11,7 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 var direc = "down"
 
 func _ready():
-	anim.play("idle")
+	anim.play("idle down")
 
 func _physics_process(delta):
 	# Get the input direction and handle the movement/deceleration.
