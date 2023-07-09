@@ -1,7 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://btevmcxef5ilp"]
+[gd_scene load_steps=7 format=3 uid="uid://cf1pxygfkdgb8"]
 
+[ext_resource type="Script" path="res://Scrips/Menu.gd" id="1_dcerj"]
 [ext_resource type="Texture2D" uid="uid://conbbcywi314u" path="res://UI Pack/Sprout Lands - UI Pack - Basic pack/Sprite sheets/UI Big Play Button normal.png" id="1_fw63v"]
-[ext_resource type="Script" path="res://Scenes/Menu.gd" id="1_rp0mb"]
 [ext_resource type="Texture2D" uid="uid://3mgdysekk6n3" path="res://UI Pack/Sprout Lands - UI Pack - Basic pack/Sprite sheets/UI Big Play Button hover.png" id="2_e8xkl"]
 [ext_resource type="Texture2D" uid="uid://drfpahc840qm8" path="res://Basic pack/Sprout Lands - Sprites - Basic pack/Tilesets/ground tiles/old tiles/Grass.png" id="3_rphp8"]
 
@@ -83,7 +83,7 @@ texture = ExtResource("3_rphp8")
 sources/0 = SubResource("TileSetAtlasSource_tp75j")
 
 [node name="Menu" type="Node2D"]
-script = ExtResource("1_rp0mb")
+script = ExtResource("1_dcerj")
 
 [node name="TextureButton" type="TextureButton" parent="."]
 offset_left = 70.0

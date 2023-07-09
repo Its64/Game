@@ -1,12 +1,15 @@
-[gd_scene load_steps=16 format=3 uid="uid://bykdchnnqhyng"]
+[gd_scene load_steps=20 format=3 uid="uid://bykdchnnqhyng"]
 
 [ext_resource type="Texture2D" uid="uid://dm0vy8liljrpt" path="res://Basic pack/Sprout Lands - Sprites - Basic pack/Tilesets/Water.png" id="1_jskf8"]
+[ext_resource type="Script" path="res://Scenes/Main.gd" id="1_llh2f"]
 [ext_resource type="Texture2D" uid="uid://bgme8l2dqv7qx" path="res://Basic pack/Sprout Lands - Sprites - Basic pack/Tilesets/Wooden House.png" id="2_048bu"]
 [ext_resource type="Texture2D" uid="uid://lalkoh76fas1" path="res://Basic pack/Sprout Lands - Sprites - Basic pack/Tilesets/Fences.png" id="3_yty6p"]
 [ext_resource type="Texture2D" uid="uid://c0nsewj4kroos" path="res://Basic pack/Sprout Lands - Sprites - Basic pack/Tilesets/ground tiles/new tiles/Grass hill tiles v.2.png" id="4_8m0x6"]
 [ext_resource type="Texture2D" uid="uid://c1hlttgdj58i" path="res://Basic pack/Sprout Lands - Sprites - Basic pack/Objects/Basic Grass Biom things 1.png" id="5_1anrc"]
 [ext_resource type="Texture2D" uid="uid://pyurna2n1l72" path="res://Basic pack/Sprout Lands - Sprites - Basic pack/Objects/Wood Bridge.png" id="6_luwpo"]
 [ext_resource type="PackedScene" uid="uid://cv4lf4mwn684d" path="res://Scenes/Player.tscn" id="7_6nqks"]
+[ext_resource type="PackedScene" uid="uid://b4tquk20pro6u" path="res://Scenes/Enemy.tscn" id="8_1yb8o"]
+[ext_resource type="FontFile" uid="uid://bfnwwh2n2b5tx" path="res://EightBits.ttf" id="9_wggen"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_48rcv"]
 texture = ExtResource("1_jskf8")
@@ -172,7 +175,7 @@ texture = ExtResource("4_8m0x6")
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
-0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 8, -8, -8, 8, -8, 8, -5, -3, -5, -3.5, 8)
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, -5, -4, -5, -4, 8, -8, 8)
 1:0/0 = 0
 1:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 1:0/0/physics_layer_0/angular_velocity = 0.0
@@ -205,7 +208,7 @@ texture = ExtResource("4_8m0x6")
 0:1/0 = 0
 0:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:1/0/physics_layer_0/angular_velocity = 0.0
-0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 8, -8, -8, -3, -8, -3.5, 8)
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, -4, -8, -4, 8, -8, 8)
 1:1/0 = 0
 1:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 1:1/0/physics_layer_0/angular_velocity = 0.0
@@ -239,7 +242,7 @@ texture = ExtResource("4_8m0x6")
 0:2/0 = 0
 0:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:2/0/physics_layer_0/angular_velocity = 0.0
-0:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(8, 2.5, 8, 8, -8, 8, -8, -8, -3, -8, -3, 2.5)
+0:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, -4, -8, -4, 2.5, 8, 2.5, 8, 8, -8, 8)
 1:2/0 = 0
 1:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 1:2/0/physics_layer_0/angular_velocity = 0.0
@@ -369,13 +372,13 @@ texture = ExtResource("5_1anrc")
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-3.5, 12, 4, 12, 3.5, 8, -4, 8)
 1:0/size_in_atlas = Vector2i(2, 2)
 1:0/0 = 0
-1:0/0/y_sort_origin = 10
+1:0/0/y_sort_origin = 7
 1:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 1:0/0/physics_layer_0/angular_velocity = 0.0
 1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-4, 14, 4, 14, 3.5, 11, -4, 11)
 3:0/size_in_atlas = Vector2i(2, 2)
 3:0/0 = 0
-3:0/0/y_sort_origin = 10
+3:0/0/y_sort_origin = 7
 3:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 3:0/0/physics_layer_0/angular_velocity = 0.0
 3:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-4, 14, 4, 14, 3.5, 11, -4, 11)
@@ -753,8 +756,15 @@ sources/4 = SubResource("TileSetAtlasSource_3uggv")
 sources/5 = SubResource("TileSetAtlasSource_741ds")
 sources/6 = SubResource("TileSetAtlasSource_a0jjy")
 
+[sub_resource type="LabelSettings" id="LabelSettings_uscsa"]
+font = ExtResource("9_wggen")
+font_size = 128
+outline_color = Color(0, 0, 0, 1)
+shadow_size = 0
+
 [node name="Main" type="Node2D"]
 y_sort_enabled = true
+script = ExtResource("1_llh2f")
 
 [node name="TileMap" type="TileMap" parent="."]
 y_sort_enabled = true
@@ -787,3 +797,36 @@ layer_3/tile_data = PackedInt32Array(262160, 131077, 0, 262161, 196613, 0, 26216
 
 [node name="Player" parent="." instance=ExtResource("7_6nqks")]
 position = Vector2(132, 85)
+
+[node name="Enemy" parent="." instance=ExtResource("8_1yb8o")]
+position = Vector2(181, 239)
+
+[node name="Enemy2" parent="." instance=ExtResource("8_1yb8o")]
+position = Vector2(361, 103)
+
+[node name="Enemy3" parent="." instance=ExtResource("8_1yb8o")]
+position = Vector2(83, 51)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = 10
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+offset_left = 22.0
+offset_top = -19.0
+offset_right = 66.0
+offset_bottom = 112.0
+text = "0 HP"
+label_settings = SubResource("LabelSettings_uscsa")
+
+[node name="Timer" type="Label" parent="CanvasLayer"]
+offset_left = 22.0
+offset_top = 61.0
+offset_right = 182.0
+offset_bottom = 192.0
+text = "0/60"
+label_settings = SubResource("LabelSettings_uscsa")
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
