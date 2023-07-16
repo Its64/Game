@@ -21,7 +21,6 @@ func _ready():
 func _physics_process(delta):
 	if attack == true:
 		if timeout == true:
-			Global.player_hp -= 1
 			label.text = str(Global.player_hp) + " HP"
 			if Global.player_hp == 0:
 				get_tree().reload_current_scene()
@@ -63,5 +62,6 @@ func _on_area_2_body_exited(body):
 		attack = false
 
 func _on_timer_timeout():
+	Global.player_hp -= 1
 	timer.stop()
 	timeout = true
